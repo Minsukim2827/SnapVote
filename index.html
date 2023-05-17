@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Polling App</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="voteForm.css" />
+        <link rel="stylesheet" href="results.css" />
+    </head>
+    <body>
+        <section id="home">
+            <h1 id="homeHeading">SnapVote</h1>
+            <div id="createPoll">
+                <h2>Create a new poll</h2>
+                <form id="pollForm">
+                    <label for="question">Question:</label><br />
+                    <input type="text" id="question" name="question" /><br />
+                    <div id="optionsContainer">
+                        <label for="options">Options:</label>
+                        <input
+                            type="range"
+                            min="1"
+                            max="8"
+                            value="1"
+                            id="optionAmount"
+                            name="optionAmount"
+                        />
+                        <span id="optionDisplay">1</span><br />
+                    </div>
+                    <div id="optionInputs">
+                        <input type="text" id="options" name="options" /><br />
+                    </div>
+
+                    <div id="durationContainer">
+                        <label for="duration">Duration (m)</label>
+
+                        <input
+                            type="range"
+                            min="2"
+                            max="10"
+                            value="2"
+                            id="duration"
+                            name="duration"
+                        />
+                        <span id="durationDisplay">2</span><br />
+                    </div>
+
+                    <input type="submit" value="Create Poll" />
+                    <div id="pollLinkContainer">
+                        <p>Your poll is ready! Share this link:</p>
+                        <a id="pollLink" href="" target="_blank">Loading...</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="poll">
+            <h1>SnapVote</h1>
+            <div id="voteContainer">
+                <h2 id="pollQuestion">Loading poll...</h2>
+                <form id="pollOptions">
+                    <!-- Poll options will be inserted here -->
+                </form>
+                <button id="submitVote">Submit Vote</button>
+                <div id="voteConfirmation" style="display: none">
+                    <p>Thank you for your vote!</p>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div id="About">
+                <h1 id="aboutHeading">About</h1>
+                <p>
+                    Welcome to SnapVote! a simple and intuitive website where
+                    you can easily design and share your own polls. Choose a
+                    duration of 2, 5, or 10 minutes for your poll to be active.
+                    Once you create a poll, a unique link will be generated for
+                    others to vote and see the real-time results. Let's engage
+                    in lively discussions and gather valuable insights through
+                    interactive polls.
+                </p>
+            </div>
+        </section>
+        <script src="./app.js" type="module"></script>
+        <script src="./results.js"></script>
+    </body>
+</html>
