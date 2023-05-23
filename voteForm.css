@@ -14,10 +14,13 @@
     border-radius: 15px;
     color: black;
     max-width: 500px;
-    width: 100%;
+    width: auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #submitVote {
@@ -55,4 +58,16 @@
 }
 #submitVote {
     margin: auto;
+}
+
+#pollVoteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+@media (max-width: 800px) {
+    #voteContainer {
+        padding: 10px;
+    }
 }

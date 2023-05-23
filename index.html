@@ -34,7 +34,7 @@
                         <input type="text" id="options" name="options" /><br />
                     </div>
 
-                    <div id="durationContainer">
+                    <!-- <div id="durationContainer">
                         <label for="duration">Duration (m)</label>
 
                         <input
@@ -46,7 +46,7 @@
                             name="duration"
                         />
                         <span id="durationDisplay">2</span><br />
-                    </div>
+                    </div> -->
 
                     <input type="submit" value="Create Poll" />
                     <div id="pollLinkContainer">
@@ -59,13 +59,18 @@
         <section id="poll">
             <h1>SnapVote</h1>
             <div id="voteContainer">
-                <h2 id="pollQuestion">Loading poll...</h2>
-                <form id="pollOptions">
-                    <!-- Poll options will be inserted here -->
-                </form>
-                <button id="submitVote">Submit Vote</button>
-                <div id="voteConfirmation" style="display: none">
-                    <p>Thank you for your vote!</p>
+                <div id="pollVoteContainer">
+                    <h2 id="pollQuestion">Loading poll...</h2>
+                    <form id="pollOptions">
+                        <!-- Poll options will be inserted here -->
+                    </form>
+                    <button id="submitVote">Submit Vote</button>
+                    <div id="voteConfirmation" style="display: none">
+                        <p>Thank you for your vote!</p>
+                    </div>
+                </div>
+                <div id="voteTally">
+                    <div id="resultQuestion"></div>
                 </div>
             </div>
         </section>
@@ -84,6 +89,6 @@
             </div>
         </section>
         <script src="./app.js" type="module"></script>
-        <script src="./results.js"></script>
+        <!-- <script src="./results.js"></script> -->
     </body>
 </html>
