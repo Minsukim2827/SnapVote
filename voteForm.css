@@ -13,8 +13,9 @@
     padding: 20px;
     border-radius: 15px;
     color: black;
+    width: 100%;
     max-width: 500px;
-    width: auto;
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

@@ -175,26 +175,32 @@ function createBarChart(voteTally) {
         const graph = document.createElement("div");
         const optionBar = document.createElement("div");
         optionBar.classList.add("optionBar");
-        optionBar.style.width = `calc(${optionPercentages[key]}%)`;
+        optionBar.style.width = `${optionPercentages[key]}%`;
 
         optionBar.style.backgroundColor = pollData.coloredOptions[optionText];
         optionBar.style.height = "30px";
-        optionBar.style.marginRight = "20px";
-
+        optionBar.style.marginRight = "10px";
+        const optionVoteCount = document.createElement("div");
+        optionVoteCount.textContent = `${pollData.voteTally[key]} Votes`;
+        optionVoteCount.style.marginLeft = "10px";
         const barContainer = document.createElement("div");
+        barContainer.classList.add("graphBarContainer");
         barContainer.style.display = "flex";
         barContainer.style.justifyContent = "flex-end";
         barContainer.style.width = "100%"; // Set the width of the container to 100%
-        barContainer.style.maxWidth = "500px"; // Set the maximum width of the container
+        barContainer.style.maxWidth = "250px"; // Set the maximum width of the container
         barContainer.appendChild(optionBar);
-
-        const optionVoteCount = document.createElement("div");
-        optionVoteCount.textContent = `${pollData.voteTally[key]} Votes`;
+        barContainer.appendChild(optionVoteCount);
         optionBarContainer.appendChild(optionLabel);
         optionBarContainer.appendChild(barContainer); // Append the barContainer instead of the optionBar
-        optionBarContainer.appendChild(optionVoteCount);
+
         voteTallyDiv.appendChild(optionBarContainer);
     }
+    const questionDiv = document.createElement("div");
+    questionDiv.classList.add("resultTitle");
+    questionDiv.style.textAlign = "center";
+    questionDiv.textContent = pollData.question; // Use the question from pollData
+    voteTallyDiv.insertBefore(questionDiv, voteTallyDiv.firstChild);
 }
 
 // On page load, check if a pollId parameter is present in the URL

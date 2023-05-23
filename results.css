@@ -40,3 +40,12 @@
 #voteTally {
     display: none;
 }
+
+.graphBarContainer {
+    display: "flex";
+    justify-content: end;
+}
+.resultTitle {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
