@@ -4,16 +4,18 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-color: rgb(12, 12, 12);
+    /* background-color: rgb(12, 12, 12); */
     gap: 30px;
     padding-bottom: 50px;
 }
 #voteContainer {
-    background-color: rgb(35, 205, 227);
+    /* background-color: rgb(35, 205, 227); */
     padding: 20px;
     border-radius: 15px;
+    border-color: rgb(226, 206, 76);
+    border-style: solid;
     color: black;
-    width: 100%;
+    /* width: 100%; */
     max-width: 500px;
 
     box-sizing: border-box;
@@ -25,9 +27,9 @@
 }
 
 #submitVote {
-    border-color: black;
+    border-color: rgb(226, 206, 76);
     background: none;
-    color: black;
+    color: rgb(226, 206, 76);
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 10px;
@@ -39,10 +41,7 @@
     background-color: rgb(38, 40, 40);
     color: rgb(40, 243, 246);
 }
-#poll > h1 {
-    font-size: 60px;
-    color: rgb(35, 205, 227);
-}
+
 #voteContainer > h2 {
     text-align: center;
 }

@@ -108,7 +108,9 @@ function getURLParameter(name) {
 
 function loadPoll(pollData) {
     // Set the question text
-    document.getElementById("pollQuestion").textContent = pollData.question;
+    const pollQuestion = document.getElementById("pollQuestion");
+    pollQuestion.textContent = pollData.question;
+    pollQuestion.style.fontSize = "50px";
 
     // Create a radio button for each option
     pollData.options.forEach((option, i) => {
