@@ -6,7 +6,7 @@ This project is a polling website which allows the user to create polls with mul
 ## Usage
 -----
 The application is hosted and running in this link:
-[Website Link]([http://github.com](https://snapvote-11223.web.app/))
+[Website Link](https://snapvote-11223.web.app/)
 
 -   To create a new poll, enter the poll question, the number of options you want to provide, and fill out the options. Click on "Create" to create the poll. The poll's unique link will be displayed. This link can be shared with others to collect votes.
 -   To vote in a poll, open the poll's unique link, select one of the options, and click on "Vote". You will then see the current vote tally.
