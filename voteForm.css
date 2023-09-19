@@ -9,7 +9,7 @@
     padding-bottom: 50px;
 }
 #voteContainer {
-    /* background-color: rgb(35, 205, 227); */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 15px;
     border-color: rgb(226, 206, 76);

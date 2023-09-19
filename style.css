@@ -47,13 +47,14 @@ input {
 
 #createPoll {
     border-style: solid;
-    border-color: rgb(227, 204, 73);
+    border-color: #e3cc49;
     padding: 20px;
     border-radius: 15px;
     color: black;
     max-width: 500px;
     width: 100%;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 #createPoll > h2 {
     text-align: center;
@@ -124,7 +125,9 @@ input {
     border-radius: 50%;
     cursor: pointer;
 }
-
+.options::-webkit-input-placeholder {
+    color: red;
+}
 #pollForm input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
@@ -177,6 +180,7 @@ input {
 
     #createPoll {
         max-width: 90%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 

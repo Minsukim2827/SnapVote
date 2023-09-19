@@ -25,9 +25,10 @@ function updateOptionInputs(e) {
     for (let i = 0; i < numOptions; i++) {
         const newInput = document.createElement("input");
         newInput.type = "text";
-        newInput.id = `option${i + 1}`;
+        newInput.classList.add = `options`;
         newInput.name = `option${i + 1}`;
         newInput.placeholder = `Option ${i + 1}`;
+
         optionInputsDiv.appendChild(newInput);
     }
 }
