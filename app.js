@@ -125,6 +125,7 @@ function loadPoll(pollData) {
         optionInput.type = "radio";
         optionInput.name = "pollOption";
         optionInput.value = i;
+        questionContainer.style.marginBottom = "25px";
 
         questionContainer.appendChild(optionLabel);
         questionContainer.appendChild(optionInput);
@@ -200,6 +201,7 @@ function createBarChart(voteTally) {
         barContainer.style.maxWidth = "300px"; // Set the maximum width of the container
         barContainer.appendChild(optionBar);
         barContainer.appendChild(optionVoteCount);
+        barContainer.style.marginTop = "25px";
         optionBarContainer.appendChild(optionLabel);
         optionBarContainer.appendChild(barContainer); // Append the barContainer instead of the optionBar
 
