@@ -38,7 +38,7 @@
     text-decoration: underline;
 }
 #voteTally {
-    width: 400px; /* adjust to your desired width */
+    width: 600px; /* adjust to your desired width */
     height: auto; /* adjust to your desired height */
     overflow: auto; /* add a scrollbar if the contents exceed the container size */
     margin: auto;
