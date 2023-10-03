@@ -144,18 +144,16 @@ function createBarChart(voteTally) {
         console.error("Error: voteTally is not an object");
         return;
     }
-    // iterate to get max vote
-    let maxVote = 0;
+    // iterate to get total votes
+    let totalVotes = 0;
     for (let key in voteTally) {
-        if (voteTally[key] > maxVote) {
-            maxVote = voteTally[key];
-        }
+        totalVotes += voteTally[key];
     }
 
     const optionPercentages = {};
-    // scale bar lengths off the max vote
+    // scale bar lengths off the total votes
     for (let key in voteTally) {
-        optionPercentages[key] = ((voteTally[key] / maxVote) * 100).toFixed(2);
+        optionPercentages[key] = ((voteTally[key] / totalVotes) * 100).toFixed(2);
     }
 
     const voteTallyDiv = document.getElementById("voteTally");
@@ -175,24 +173,31 @@ function createBarChart(voteTally) {
         const optionLabel = document.createElement("span");
         optionLabel.textContent = optionText;
         optionLabel.style.marginRight = "10px";
-
+        optionLabel.style.width = "100px"; // Set the width to your desired value
+        optionLabel.style.whiteSpace = "normal"; // Allow the text to wrap onto the next line
+        optionLabel.style.wordWrap = "break-word"; // Break words to prevent overflow
+        
         const graph = document.createElement("div");
         const optionBar = document.createElement("div");
         optionBar.classList.add("optionBar");
         optionBar.style.width = `${optionPercentages[key]}%`;
+        optionBar.style.marginRight = "0"; // remove the margin
+
 
         optionBar.style.backgroundColor = pollData.coloredOptions[optionText];
         optionBar.style.height = "30px";
         optionBar.style.marginRight = "10px";
         const optionVoteCount = document.createElement("div");
         optionVoteCount.textContent = `${pollData.voteTally[key]} Votes`;
-        optionVoteCount.style.marginLeft = "10px";
+        optionVoteCount.style.marginLeft = "0px";
+
+        
         const barContainer = document.createElement("div");
         barContainer.classList.add("graphBarContainer");
         barContainer.style.display = "flex";
         barContainer.style.justifyContent = "flex-end";
         barContainer.style.width = "100%"; // Set the width of the container to 100%
-        barContainer.style.maxWidth = "250px"; // Set the maximum width of the container
+        barContainer.style.maxWidth = "300px"; // Set the maximum width of the container
         barContainer.appendChild(optionBar);
         barContainer.appendChild(optionVoteCount);
         optionBarContainer.appendChild(optionLabel);
@@ -206,6 +211,7 @@ function createBarChart(voteTally) {
     questionDiv.textContent = pollData.question; // Use the question from pollData
     voteTallyDiv.insertBefore(questionDiv, voteTallyDiv.firstChild);
 }
+
 
 // On page load, check if a pollId parameter is present in the URL
 window.onload = async function () {

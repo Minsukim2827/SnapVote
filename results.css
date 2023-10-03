@@ -38,14 +38,27 @@
     text-decoration: underline;
 }
 #voteTally {
+    width: 400px; /* adjust to your desired width */
+    height: auto; /* adjust to your desired height */
+    overflow: auto; /* add a scrollbar if the contents exceed the container size */
+    margin: auto;
     display: none;
+
 }
 
 .graphBarContainer {
-    display: "flex";
-    justify-content: end;
+
+    display: flex;
+    align-items: flex-end; /* Align the bars to the bottom of the container */
 }
 .resultTitle {
     font-size: 30px;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 600px) {
+    #voteTally {
+        width: 90%; 
+    }
+}
+
